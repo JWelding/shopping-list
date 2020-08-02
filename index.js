@@ -28,10 +28,10 @@ function setUpEventHandlers(){
 $(setUpEventHandlers);
 
 $("ul").on("click", ".shopping-item-delete", function() {
-$(event.target).closest("li").remove();
+$(this).closest('li').remove();
 });
 
 
 $("ul").on("click", ".shopping-item-toggle", function() {
-  $(this).parent().parent().find('.shopping-item').toggleClass("shopping-item__checked");
+  $(this).closest('li').find('.shopping-item').toggleClass("shopping-item__checked");
 });
