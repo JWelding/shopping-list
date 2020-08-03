@@ -22,16 +22,16 @@ function submitForm(){
 }
 
 function setUpEventHandlers(){
+  $("ul").on("click", ".shopping-item-delete", function() {
+  $(this).closest('li').remove();
+  });
+  
+  
+  $("ul").on("click", ".shopping-item-toggle", function() {
+    $(this).closest('li').find('.shopping-item').toggleClass("shopping-item__checked");
+  });
     submitForm();
 }
 
 $(setUpEventHandlers);
 
-$("ul").on("click", ".shopping-item-delete", function() {
-$(this).closest('li').remove();
-});
-
-
-$("ul").on("click", ".shopping-item-toggle", function() {
-  $(this).closest('li').find('.shopping-item').toggleClass("shopping-item__checked");
-});
